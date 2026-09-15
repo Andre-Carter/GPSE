@@ -73,6 +73,8 @@ Edit
   ↓
 Inspect
   ↓
+cargo fmt -- --check
+
 cargo fmt
   ↓
 cargo check/test/clippy

@@ -2507,5 +2507,3 @@ pub static W_TO_Z_MASS_RATIO: Constant = Constant {
     si_base_units: None,
     uncertainty: Some(0.000_13),
 };
-
-

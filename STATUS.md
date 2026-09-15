@@ -1,4 +1,17 @@
-FOOTER NOTES 
+# Current State
+
+# Confirmed Findings
+
+# Active Investigation
+
+# Active Experiments
+
+# Recent Decisions
+
+# Next Actions
+
+# Validation Results 
+// for future outline not to worry. Praise Klang
 
 CURRENT INVESTIGATION
 ---------------------

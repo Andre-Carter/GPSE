@@ -1,0 +1,1 @@
+//this is where we explictly declare standards. A rulebrick for spelling, capitalization, grammar, and more scientific issues BROTHER. We do need a basic outline eventually. 

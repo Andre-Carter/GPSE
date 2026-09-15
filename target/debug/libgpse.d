@@ -1,0 +1,1 @@
+C:\Users\hlvdr\krabby\GPSE\GPSE\target\debug\libgpse.rlib: C:\Users\hlvdr\krabby\GPSE\GPSE\src\chemical\mod.rs C:\Users\hlvdr\krabby\GPSE\GPSE\src\lib.rs C:\Users\hlvdr\krabby\GPSE\GPSE\src\physical\constants.rs C:\Users\hlvdr\krabby\GPSE\GPSE\src\physical\mod.rs

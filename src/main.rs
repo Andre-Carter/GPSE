@@ -1,7 +1,3 @@
-mod chemical;
-//mod mathematical;
-mod physical;
-
 use std::f64::consts::PI;
 
 fn main() {

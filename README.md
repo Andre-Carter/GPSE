@@ -633,3 +633,40 @@ The implementation may change.
 The principles should change only when we have a good reason.
 
 **GPSE is allowed to become something better than the original idea.**
+
+FOOTER NOTES 
+
+CURRENT INVESTIGATION
+---------------------
+Legacy source structure is being characterized before refactoring.
+
+CONFIRMED
+---------
+- `gpse` is both a library and binary crate.
+- `lib.rs` exposes `chemical` and `physical`.
+- `physical::constants` contains a large canonical constant dataset.
+- `chemical/elements.rs` contains an Element model and periodic-element data.
+- `chemical/mod.rs` does not currently expose `elements`.
+- `main.rs` independently declares `chemical` and `physical`.
+- `main.rs` also directly consumes the library crate (`gpse::...`).
+- The executable therefore appears to compile a duplicate local module
+  tree alongside the library.
+
+WARNING INVESTIGATION
+---------------------
+The duplicate module declarations are a strong candidate for at least
+some of the large warning count observed during cargo check/clippy.
+
+NOT YET DECIDED
+---------------
+- Whether `main.rs` should remove its local module declarations.
+- Exact public API for chemical data.
+- Whether `elements` should be directly exported from `chemical`.
+- Final organization of physical constants.
+- Constant metadata / symbol / alias representation.
+
+NEXT INVESTIGATION
+------------------
+Characterize the actual compiler/clippy warnings and determine which
+warnings originate from duplicate binary module compilation versus
+intentional unused canonical data.

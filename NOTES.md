@@ -34,3 +34,35 @@ NEXT INVESTIGATION
 Characterize the actual compiler/clippy warnings and determine which
 warnings originate from duplicate binary module compilation versus
 intentional unused canonical data.
+
+
+
+
+
+
+EXPERIMENT: Canonical Entity Architecture
+
+Purpose:
+Determine whether a small immutable entity-definition layer provides
+a useful boundary between canonical physical data and simulation state.
+
+Initial entities:
+- Sun
+- Earth
+- Moon
+
+Constraints:
+- No simulation runtime.
+- No ECS.
+- No orbital mechanics.
+- No mutable global state.
+- No premature abstraction.
+- Reuse existing physical constants where appropriate.
+
+Success criteria:
+- Clear ownership of canonical data.
+- Simple imports.
+- Deterministic values.
+- Independently testable.
+- No unnecessary coupling.
+- Architecture remains easy to replace if the experiment fails.

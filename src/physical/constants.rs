@@ -2508,4 +2508,4 @@ pub static W_TO_Z_MASS_RATIO: Constant = Constant {
     uncertainty: Some(0.000_13),
 };
 
-fn main() {}
+

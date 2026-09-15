@@ -66,3 +66,23 @@ Success criteria:
 - Independently testable.
 - No unnecessary coupling.
 - Architecture remains easy to replace if the experiment fails.
+
+OUR SACRED WORK FLOW
+
+Edit
+  ↓
+Inspect
+  ↓
+cargo fmt
+  ↓
+cargo check/test/clippy
+  ↓
+git diff
+  ↓
+git status
+  ↓
+YOU decide what gets staged
+  ↓
+YOU approve the commit
+  ↓
+push

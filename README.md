@@ -486,51 +486,9 @@ At any point in development, maintain a clear distinction between:
 
 Features that actually exist and are tested.
 
-### Experimental
-
-Features being investigated and subject to change.
-
-### Planned
-
-Features that have been identified but not yet implemented.
-
-### Speculative
-
-Ideas that may be useful but are not currently committed to.
-
-Do not describe planned or speculative functionality as though it already exists.
-
----
-
-# Current Project State
-
-This section should be updated as GPSE evolves.
-
-## Current Focus
-
-[Update this section during active development.]
-
 ## Current Architecture
 
 [Keep the latest agreed architectural overview here.]
-
-## Known Problems
-
-[Record known bugs, architectural weaknesses, numerical concerns, technical debt, and incomplete systems.]
-
-## Active Experiments
-
-[Record experiments currently being evaluated.]
-
-## Deferred Decisions
-
-[Record important decisions intentionally postponed until more information is available.]
-
-## Next Major Objectives
-
-[Record the next small set of concrete objectives.]
-
----
 
 # Continuity Protocol
 

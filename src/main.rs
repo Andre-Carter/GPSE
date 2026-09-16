@@ -1,20 +1,24 @@
-//use std::f64::consts::PI;
-
+use gpse::physical::equations::earth_moon_force;
+use gpse::entities::celestial::{EARTH, MOON};
+use gpse::physical::equations::gravitational_force;
 fn main() {
-    //speed_of_light_is_deterministic();
-    gravity();
+    earth_moon_force();
+
+    let g_force = gravitational_force(
+    EARTH.mass_kg,
+    MOON.mass_kg,
+    384_400_000.0,
+    );
+
+    println!("{g_force}");
+
+    let test_1 = gravitational_force(1.0, 1.0, 1.0);
+    println!("{test_1}");
+    let test_2 = gravitational_force(2.0, 1.0, 1.0);
+    println!("{test_2}");
 }
 
-//use gpse::physical::constants::SPEED_OF_LIGHT_IN_VACUUM;
 
-//#[test]
-//fn speed_of_light_is_deterministic() {
-//    assert_eq!(SPEED_OF_LIGHT_IN_VACUUM.value, 299_792_458.0);
-//}
 
-use gpse::physical::constants::NEWTONIAN_CONSTANT_OF_GRAVITATION;
 
-fn gravity() {
-    let gravitational_constant = NEWTONIAN_CONSTANT_OF_GRAVITATION.value;
-    println!("{gravitational_constant}"); 
-}
+

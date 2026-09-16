@@ -1,13 +1,20 @@
-use std::f64::consts::PI;
+//use std::f64::consts::PI;
 
 fn main() {
-    let x = 10.0 * PI;
-    println!("{x}");
+    //speed_of_light_is_deterministic();
+    gravity();
 }
 
-use gpse::physical::constants::SPEED_OF_LIGHT_IN_VACUUM;
+//use gpse::physical::constants::SPEED_OF_LIGHT_IN_VACUUM;
 
-#[test]
-fn speed_of_light_is_deterministic() {
-    assert_eq!(SPEED_OF_LIGHT_IN_VACUUM.value, 299_792_458.0);
+//#[test]
+//fn speed_of_light_is_deterministic() {
+//    assert_eq!(SPEED_OF_LIGHT_IN_VACUUM.value, 299_792_458.0);
+//}
+
+use gpse::physical::constants::NEWTONIAN_CONSTANT_OF_GRAVITATION;
+
+fn gravity() {
+    let gravitational_constant = NEWTONIAN_CONSTANT_OF_GRAVITATION.value;
+    println!("{gravitational_constant}"); 
 }

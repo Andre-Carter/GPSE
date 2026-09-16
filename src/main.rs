@@ -1,6 +1,11 @@
 use gpse::physical::equations::earth_moon_force;
 use gpse::entities::celestial::{EARTH, MOON};
 use gpse::physical::equations::gravitational_force;
+//units
+//invalid inputs
+//changing state/time
+//how equations should compose
+//how the eventual simulation layer consumes them
 fn main() {
     earth_moon_force();
 

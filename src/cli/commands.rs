@@ -1,16 +1,14 @@
 use crate::cli::calculator::cli_calc;
-use std::io::{stdin, stdout, Write};
+use std::io::{Write, stdin, stdout};
 
 fn read(input: &mut String) {
-    stdout().flush()
-        .expect("failed to flush");
-    stdin().read_line(input)
-        .expect("failed to read");
+    stdout().flush().expect("failed to flush");
+    stdin().read_line(input).expect("failed to read");
 }
 
 pub fn cli_commands() {
     println!("Commands system online!");
-    
+
     loop {
         let mut command: String = String::new();
 
@@ -24,7 +22,7 @@ pub fn cli_commands() {
                 println!("Commands:");
                 println!("calc");
                 println!("cargo");
-                println!("git")
+                println!("git");
                 println!("exit");
             }
 
@@ -50,5 +48,4 @@ pub fn cli_commands() {
             }
         }
     }
-
 }

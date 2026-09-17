@@ -1,6 +1,7 @@
 use gpse::entities::celestial::{EARTH, MOON};
 use gpse::mathematical::expressions::expressions_test;
 use gpse::physical::equations::gravitational_force;
+use gpse::cli::calculator::cli_calc;
 
 //units
 //invalid inputs
@@ -14,4 +15,6 @@ fn main() {
     println!("{g_force}");
 
     expressions_test(27.0, 15.0);
+
+    cli_calc();
 }

@@ -1,7 +1,7 @@
 use gpse::entities::celestial::{EARTH, MOON};
 use gpse::mathematical::expressions::expressions_test;
 use gpse::physical::equations::gravitational_force;
-use gpse::cli::calculator::cli_calc;
+use gpse::cli::commands::cli_commands;
 
 //units
 //invalid inputs
@@ -16,5 +16,5 @@ fn main() {
 
     expressions_test(27.0, 15.0);
 
-    cli_calc();
+    cli_commands();
 }

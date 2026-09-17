@@ -8,39 +8,40 @@ fn read(input: &mut String) {
 pub fn cli_calc() {
     println!("* GPSE CLI Calculator *");
 
-    let mut num1: String = String::new();
-    let mut num2: String = String::new();
+    let mut operand_1: String = String::new();
+    let mut operand_2: String = String::new();
     let mut operator: String = String::new();
 
     print!("Operand 1: ");
-    read(&mut num1);
-    print!("Operator (+) (-) (*) (/) (^) (%):");
+    read(&mut operand_1);
+
+    print!(
+        "Enter Operator | (+)(-)(*)(/)(^)(%) or \"add\", \"subtract\", \"multiply\", \"divide\", \"power\", \"modulo\":"
+    );
     read(&mut operator);
+
     print!("Operand 2: ");
-    read(&mut num2);
+    read(&mut operand_2);
 
-    let num1: f32 = num1.trim().parse().unwrap();
-    let num2: f32 = num2.trim().parse().unwrap();
-    let operator: char = operator.trim().chars().next().unwrap();
+    let operand_1: f32 = operand_1.trim().parse().unwrap();
+    let operand_2: f32 = operand_2.trim().parse().unwrap();
+    let operator = operator.trim().to_lowercase();
 
-    let operators = String::from("+-*/%^");
-
-    if !operators.contains(operator) {
-        println!("unknown operator");
-    }
-
-    let solution = match operator {
-        '+' => num1 + num2,
-        '-' => num1 - num2,
-        '*' => num1 * num2,
-        '/' => num1 / num2,
-        '^' => num1.powf(num2),
-        '%' => num1 % num2,
-        _ => panic!("error in operator"),
+    let solution = match operator.as_str() {
+    "+" | "add" => operand_1 + operand_2,
+    "-" | "subtract" => operand_1 - operand_2,
+    "*" | "multiply" => operand_1 * operand_2,
+    "/" | "divide" => operand_1 / operand_2,
+    "^" | "power" => operand_1.powf(operand_2),
+    "%" | "modulo" => operand_1 % operand_2,
+    _ => {
+        println!("Unknown operator.");
+        return;
+        }
     };
-
+    
     println!(
         "Solution: {} {} {} = {} <---",
-        num1, operator, num2, solution
+        operand_1, operator, operand_2, solution
     );
 }

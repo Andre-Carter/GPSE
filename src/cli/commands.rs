@@ -23,7 +23,7 @@ pub fn cli_commands() {
                 println!("calc");
                 println!("cargo");
                 println!("git");
-                println!("exit");
+                println!("end");
             }
 
             "calc" => {
@@ -38,7 +38,7 @@ pub fn cli_commands() {
                 println!("git status");
             }
 
-            "exit" => {
+            "end" => {
                 println!("Goodbye!");
                 break;
             }

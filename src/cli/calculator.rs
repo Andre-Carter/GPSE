@@ -9,17 +9,17 @@ fn read(input: &mut String) {
 
 pub fn cli_calc() {
 
-    println!("Welcome to CLI Calculator!");
+    println!("* GPSE CLI Calculator *");
 
     let mut num1: String = String::new();
     let mut num2: String = String::new();
     let mut operator: String = String::new();
         
-    print!("What is your first number?: ");
+    print!("Operand 1: ");
     read(&mut num1);
-    print!("Operation (+, -, *, /, %, ^): ");
+    print!("Operator (+) (-) (*) (/) (^) (%):");
     read(&mut operator);
-    print!("What is your second number?: ");
+    print!("Operand 2: ");
     read(&mut num2);
         
     let num1: f32 = num1.trim().parse().unwrap(); 
@@ -37,8 +37,8 @@ pub fn cli_calc() {
         '-' => num1 - num2,
         '*' => num1 * num2,
         '/' => num1 / num2,
-        '%' => num1 % num2,
         '^' => num1.powf(num2),
+        '%' => num1 % num2,
          _ => panic!("error in operator")
     };
         

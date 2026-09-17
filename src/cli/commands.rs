@@ -20,15 +20,24 @@ pub fn cli_commands() {
         let command = command.trim();
 
         match command {
+            "help" => {
+                println!("Commands:");
+                println!("calc");
+                println!("cargo");
+                println!("git")
+                println!("exit");
+            }
+
             "calc" => {
                 cli_calc();
             }
 
-            "help" => {
-                println!("Commands:");
-                println!("calc");
-                println!("help");
-                println!("exit");
+            "cargo" => {
+                println!("cargo check");
+            }
+
+            "git" => {
+                println!("git status");
             }
 
             "exit" => {

@@ -6,8 +6,8 @@ pub struct CelestialBody {
 
 pub static SUN: CelestialBody = CelestialBody {
     name: "Sun",
-    mass_kg: 1.989e30, //kg
-    radius_m: 696_340.0, //km
+    mass_kg: 1.989e30,
+    radius_m: 696_340.0,
 };
 
 pub static EARTH: CelestialBody = CelestialBody {

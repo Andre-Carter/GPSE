@@ -1,3 +1,0 @@
-- rust bible literal kjv
-- cli parsing: comma, underscore, exeption, 
-- open gpse cli without running cargo run C:/Users/hlvdr/krabby/gpse>gpse cli (enter "gpse" or "gpse cli")???

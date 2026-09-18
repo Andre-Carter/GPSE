@@ -19,4 +19,8 @@ Current unresolved questions:
 This experiment is evidence for the current architectural direction,
 not a final API commitment.
 
+- renumber bible books with double digit architeture or what not to insure as order as bible even when rendered in different systems like github!
 
+- bible pub mod
+
+- bible.rs cli commands test

@@ -1,0 +1,1 @@
+- We don't reject external formats because they're impure. We reject making them the foundation when GPSE can own the foundation itself.

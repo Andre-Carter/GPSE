@@ -598,3 +598,360 @@ And we will leave ourselves room to discover what GPSE can become.
 > **Test it against reality.**
 >
 > **Then go further.**
+
+## 26. GPSE Should Be Able to Stand Alone
+
+GPSE should strive to remain useful without requiring an external service, database, website, or runtime data source for knowledge that GPSE intentionally incorporates.
+
+External resources may be useful and supported, but they should not define the existence of the core system.
+
+Where appropriate, GPSE should be capable of carrying its own:
+
+* knowledge
+* mathematics
+* scientific data
+* reference data
+* text
+* models
+* algorithms
+* documentation
+* tools
+
+The goal is not isolation from the world.
+
+The goal is independence when independence is valuable.
+
+---
+
+## 27. Rust Is Part of the Foundation
+
+GPSE should favor representing foundational systems directly in Rust when doing so improves:
+
+* portability
+* inspectability
+* determinism
+* maintainability
+* compile-time guarantees
+* integration
+* longevity
+* extensibility
+
+Rust should not merely be treated as the language surrounding GPSE.
+
+Where appropriate, Rust should be the medium through which GPSE's foundational knowledge and systems are represented.
+
+---
+
+## 28. Embedded Knowledge Is a Deliberate Capability
+
+GPSE may intentionally contain substantial bodies of structured knowledge directly within the project.
+
+Examples may include:
+
+* mathematical reference material
+* physical constants
+* chemical data
+* celestial data
+* technical references
+* structured text
+* historical data
+* scientific datasets
+* literary or public-domain works
+
+Large amounts of data are not automatically a design failure.
+
+The design question is whether the data has a coherent representation, reliable provenance, deterministic behavior, and useful interfaces.
+
+---
+
+## 29. Data Volume Must Not Dictate Poor Architecture
+
+Large datasets should not be avoided merely because they are large.
+
+Instead, GPSE should develop foundations capable of handling large bodies of information responsibly.
+
+The system should consider:
+
+* memory usage
+* indexing
+* lookup performance
+* compilation cost
+* binary size
+* modularity
+* validation
+* versioning
+* provenance
+* querying
+* testing
+* future extension
+
+The existence of a large dataset should become a reason to improve the foundation rather than abandon the goal.
+
+---
+
+## 30. Build Foundations Through Real Problems
+
+Foundational systems should be tested against meaningful, non-trivial problems.
+
+A subsystem should not exist only because its abstraction appears elegant.
+
+GPSE should use demanding real datasets and real computational problems to expose weaknesses in its architecture.
+
+A large text corpus, scientific dataset, celestial catalog, simulation, or engineering model may therefore serve as a proving ground for a more general GPSE capability.
+
+The immediate application is not necessarily the final purpose of the subsystem.
+
+---
+
+## 31. Generalize What the Problem Teaches
+
+When implementing a large system, GPSE should examine which problems are specific to the application and which reveal a general computational primitive.
+
+For example, building a structured textual archive may reveal reusable systems for:
+
+* hierarchical data
+* identifiers
+* indexing
+* searching
+* metadata
+* collections
+* references
+* versioning
+* provenance
+* retrieval
+
+The goal is to extract the reusable foundation without unnecessarily forcing unrelated domains into the same abstraction.
+
+---
+
+## 32. Internal Representation and External Representation Are Distinct
+
+GPSE should distinguish between:
+
+* what GPSE fundamentally understands
+* how GPSE stores it
+* how GPSE imports it
+* how GPSE exports it
+* how another program represents the same information
+
+External formats should be treated as interfaces rather than unquestioned foundations.
+
+GPSE may support parsing and conversion where useful.
+
+However, GPSE should not become dependent upon an external representation merely because that representation is convenient.
+
+---
+
+## 33. Parsing Is a Capability, Not a Foundation
+
+GPSE should be capable of consuming external data when doing so is useful.
+
+However, importing a dataset should not automatically mean that the external dataset becomes the canonical representation of the knowledge.
+
+A GPSE-native representation may coexist with:
+
+* JSON
+* CSV
+* TOML
+* XML
+* databases
+* binary formats
+* network resources
+* other software systems
+
+The purpose of parsing is interoperability.
+
+The purpose of GPSE's internal model is ownership of the system's own representation.
+
+---
+
+## 34. Knowledge Should Be Addressable
+
+Where practical, information stored within GPSE should have stable and meaningful ways to identify it.
+
+A user should eventually be able to ask GPSE for a specific piece of information without needing to know how the information is physically stored.
+
+Examples may include:
+
+* book → chapter → verse
+* element → isotope
+* body → property
+* constant → value
+* equation → definition
+* dataset → record
+* entity → attribute
+
+Addressability is foundational to querying, testing, indexing, and long-term preservation.
+
+---
+
+## 35. Provenance Is Part of Data
+
+GPSE should preserve information about where important data came from.
+
+Where appropriate, data should be accompanied by:
+
+* source
+* author or organization
+* edition
+* publication
+* date
+* license
+* measurement status
+* uncertainty
+* version
+* transformation history
+
+A value without context may be difficult to trust or interpret decades later.
+
+GPSE should prefer traceable knowledge over anonymous numbers.
+
+---
+
+## 36. Historical Stability Matters
+
+GPSE should distinguish between changing knowledge and historical records.
+
+When data changes over time, the project should avoid silently replacing historical information while presenting it as though it had never changed.
+
+Where appropriate, GPSE should preserve:
+
+* versions
+* revisions
+* historical values
+* deprecated representations
+* reasons for changes
+
+A future maintainer should be able to understand not only what GPSE contains, but how it became what it is.
+
+---
+
+## 37. GPSE Should Be Built for Future Custodians
+
+GPSE should be understandable by people who did not participate in its original development.
+
+A future maintainer should be able to determine:
+
+* what a system does
+* why it exists
+* why it was designed that way
+* what alternatives were considered
+* what assumptions were made
+* what limitations remain
+* what must not be changed casually
+
+The repository should function as an institutional memory, not merely a collection of source files.
+
+---
+
+## 38. Long-Term Preservation Is a Design Consideration
+
+GPSE should be designed with the possibility that its source code, data, and documentation may outlive its original developers.
+
+This encourages:
+
+* explicit formats
+* understandable source
+* deterministic behavior
+* strong tests
+* minimal unnecessary dependencies
+* clear licensing
+* provenance
+* documentation
+* reproducibility
+* portable architecture
+
+The goal is not to predict the future.
+
+The goal is to leave future maintainers enough information to reconstruct the intent of the system.
+
+---
+
+## 39. GPSE Should Preserve the Ability to Rebuild
+
+A long-lived project should not depend entirely upon an opaque historical build environment.
+
+GPSE should strive to preserve enough information for future developers to understand:
+
+* required tools
+* dependencies
+* versions
+* build assumptions
+* data sources
+* generation procedures
+* validation procedures
+
+A source repository is more valuable when its future custodians can understand how to turn the source into a functioning system.
+
+---
+
+## 40. Large Data Is a Test of the Foundation
+
+When GPSE encounters a dataset large enough to expose weaknesses in its architecture, those weaknesses should be treated as architectural evidence.
+
+Performance problems, compilation problems, memory pressure, lookup inefficiency, binary size, and maintainability issues should be measured and documented.
+
+Large-scale data should therefore act as a stress test for GPSE's foundations.
+
+---
+
+## 41. Every Major Subsystem Should Have a Reason to Exist
+
+GPSE should periodically ask:
+
+> What fundamental capability does this subsystem provide?
+
+A subsystem should not exist solely because it is interesting.
+
+Its purpose should be understandable in relation to the larger system.
+
+When a subsystem solves multiple classes of problems, its foundational value should be documented.
+
+---
+
+## 42. The Repository Is Part of the Artifact
+
+GPSE is not only its compiled executable.
+
+The long-term artifact includes:
+
+* source code
+* tests
+* documentation
+* research
+* provenance
+* data
+* architectural decisions
+* examples
+* build information
+* historical records
+
+The repository itself should therefore be treated as part of what GPSE preserves.
+
+---
+
+## 43. Build for the Computer We Have and the Computer We May Have
+
+GPSE should remain practical on present hardware while avoiding unnecessary assumptions that today's hardware, storage, operating systems, or network access will always exist.
+
+Performance should be measured against real systems.
+
+Portability should be considered at the architectural level.
+
+Future hardware should be able to benefit from GPSE without requiring the entire conceptual foundation to be discarded.
+
+---
+
+## 44. The Foundation Must Remain Smaller Than the Universe It Enables
+
+GPSE may eventually contain enormous amounts of functionality.
+
+The underlying principles should remain comparatively simple.
+
+The objective is not to create complexity for its own sake.
+
+The objective is to create a small number of strong foundations upon which increasingly large systems can be constructed.
+
+> Strong foundations.
+> Many systems.
+> One coherent architecture.

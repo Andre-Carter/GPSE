@@ -112,3 +112,7 @@ When a note becomes sufficiently mature, determine whether it belongs in:
 * code comments
 * tests
 * implementation
+
+I've noted the GPSE symbolic-language idea: exploring pictograms, pictographs, glyphs, and pictoglyph-like representations as a future interface/language for GPSE, while keeping the underlying data machine-readable and authoritative.
+
+The glyph represents the data — it does not become the data.

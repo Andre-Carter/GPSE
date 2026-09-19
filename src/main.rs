@@ -31,5 +31,6 @@ fn main() {
         println!("n = {n}, CT = {result}");
     }
 
+    println!("Type \"help\" for commands.")
     cli_commands();
 }

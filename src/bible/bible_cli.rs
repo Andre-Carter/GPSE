@@ -9,7 +9,5 @@ pub fn bible_cli() {
     let mut bible: String = String::new();
     read(&mut bible);
 
-// let match
-
-    
+    // let match
 }

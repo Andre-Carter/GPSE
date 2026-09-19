@@ -18,5 +18,3 @@ impl fmt::Display for Verse {
 pub static GENESIS_001_001: Verse = Verse {
     content: "In the beginning God created the Heauen, and the Earth.",
 };
-
-

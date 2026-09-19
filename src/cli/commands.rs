@@ -79,9 +79,7 @@ pub fn cli_commands() {
             }
 
             "machine-spirit debug ritual" => {
-                println!(
-                    r"cargo: clean -> build -> run .\target\debug\gpse.exe"
-                )
+                println!(r"cargo: clean -> build -> run .\target\debug\gpse.exe")
             }
 
             "end" => {
